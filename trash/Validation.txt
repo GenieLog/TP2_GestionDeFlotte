@@ -1,0 +1,19 @@
+**********************
+Ce document sert à exprimer des objections, remarques , etc...
+à propos des doc en attente de validation
+n'oubliez pas de préciser qui écrit
+
+Ex:
+PLANIF
+tartanpion "Je trouve ca génial"
+john " approuvé"
+louis "tu devrais revoir tel point, cest pas génial"
+
+
+En espérant que cette idée marche...
+
+******************
+
+PLANIF
+romain 	"Qu'en pensez-vous? Ca me gene un peu de dire qui fait quoi alors n'hésitez pas à me 			dire si vous avez des remarques"
+
