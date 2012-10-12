@@ -1,4 +1,4 @@
-**********************
+﻿**********************
 Ce document sert à exprimer des objections, remarques , etc...
 à propos des doc en attente de validation
 n'oubliez pas de préciser qui écrit
@@ -15,5 +15,7 @@ En espérant que cette idée marche...
 ******************
 
 PLANIF
-romain 	"Qu'en pensez-vous? Ca me gene un peu de dire qui fait quoi alors n'hésitez pas à me 			dire si vous avez des remarques"
+romain 	"Qu'en pensez-vous? Ca me gene un peu de dire qui fait quoi alors n'hésitez pas à me dire si vous avez des remarques"
+
+emmanuel "Moi je trouve ça bien répartit , et puis il faut bien que quelqu'un dise quoi faire sinon on s'en sortira pas, donc validé"
 
