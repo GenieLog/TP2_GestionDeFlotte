@@ -19,3 +19,11 @@ romain 	"Qu'en pensez-vous? Ca me gene un peu de dire qui fait quoi alors n'hés
 
 emmanuel "Moi je trouve ça bien répartit , et puis il faut bien que quelqu'un dise quoi faire sinon on s'en sortira pas, donc validé"
 
+
+
+MODELE metiers
+Romain "aux bateauX -> l1,l3  ; aux clientS -> l4  ; relatives AUX balades -> l7; nationalitee ->nationalite
+j'aurais :
+mis un lien entre bateau et balades (ca me semble indispensable)
+rajouter des id_bateau,id_client ..etc"
+
