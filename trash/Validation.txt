@@ -27,3 +27,7 @@ j'aurais :
 mis un lien entre bateau et balades (ca me semble indispensable)
 rajouter des id_bateau,id_client ..etc"
 
+
+Redistribution
+Je m'occupe de l'introduction générale.
+
