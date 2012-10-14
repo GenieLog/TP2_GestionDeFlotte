@@ -15,3 +15,11 @@ Procedure :
 - faites vos commit en local
 - une fois que vous avez terminé, mettez tout sur le serveur avec push
 
+
+----------------------------------
+
+Pour les odt :
+- copiez le document : base_des_doc (pour avoir une meme presentation)
+- faites votre travail en prenant soin de bien mettre titre 1 etc
+- générez le pdf si besoin et supprimez la pagination dans le footer
+
