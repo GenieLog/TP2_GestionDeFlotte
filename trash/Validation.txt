@@ -32,6 +32,6 @@ Redistribution
 Romain "Je m'occupe de l'introduction générale."
 
 
-Diagramme classe
+Diagramme classes
 romain "Dites moi ce que vous en pensez; je sais pas trop comment gérer les droits des employés; sinon les classes qui doivent etre sauvegarder implementent 'editable' mais je l'ai pas représenté pour la lisibilité"
 
