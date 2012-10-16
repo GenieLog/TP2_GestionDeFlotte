@@ -27,7 +27,7 @@ private:
     unsigned int id_balade;
     QDateTime depart;
     QDateTime arrivee;
-    Skipper* skipper;
+    Skipper* skipper; // a changer dans le diagramme des classes
     Bateau* bateau;
     QVector<Escale*> escales;
     QVector<Client*> clients;
