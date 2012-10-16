@@ -6,9 +6,9 @@
 
 typedef enum {
     AUCUN,
+    // il faut se renseigner sur les != types de permis bateau
     P_HAUTURIER,
-    P_COTES,
-// il faut se renseigner sur les != types de permis
+    P_COTES
 } Permis;
 
 class TypeBateau

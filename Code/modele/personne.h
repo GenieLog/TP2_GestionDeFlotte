@@ -4,6 +4,8 @@
 #include <QString>
 #include <QDate>
 
+
+
 class Personne
 {
 public:
@@ -14,6 +16,16 @@ private:
     bool sexe; // 0 = Homme, 1=Femme
     QString nationalite;
     QDate naissance;
+};
+
+class skipper:Personne
+{
+
+};
+
+class Emplaye:Personne
+{
+
 };
 
 #endif // PERSONNE_H
