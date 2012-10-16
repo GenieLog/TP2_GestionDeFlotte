@@ -1,4 +1,4 @@
-#include "bateau.h"
+#include "modele/bateau.h"
 
 Bateau::Bateau()
 {

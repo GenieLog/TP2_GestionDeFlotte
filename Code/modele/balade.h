@@ -11,8 +11,8 @@ public:
     QDateTime getDepart(void);
     QDateTime getArrivee(void);
 private:
-    QDatetime depart;
-    QDatetime arrivee;
+    QDateTime depart;
+    QDateTime arrivee;
     QString nom;
 };
 

@@ -1,4 +1,4 @@
-#include "balade.h"
+#include "modele/balade.h"
 
 Balade::Balade()
 {

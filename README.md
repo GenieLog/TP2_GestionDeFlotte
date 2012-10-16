@@ -16,9 +16,6 @@ Procedure :
 - faites votre travail
 - faites vos commit en local
 - une fois que vous avez terminé, mettez tout sur le serveur avec push
-<<<<<<< HEAD
-=======
-
 
 ----------------------------------
 
@@ -27,4 +24,4 @@ Pour les odt :
 - faites votre travail en prenant soin de bien mettre titre 1 etc
 - générez le pdf si besoin et supprimez la pagination dans le footer
 
->>>>>>> b69401367ad16383bee19b205052aa1a2998d35e
+
