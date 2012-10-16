@@ -27,9 +27,10 @@ private:
     unsigned int id_balade;
     QDateTime depart;
     QDateTime arrivee;
-    QVector<Escale*> escales;
     Skipper* skipper;
     Bateau* bateau;
+    QVector<Escale*> escales;
+    QVector<Client*> clients;
 };
 
 #endif // BALADE_H
