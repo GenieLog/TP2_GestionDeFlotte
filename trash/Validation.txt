@@ -1,4 +1,4 @@
-﻿**********************
+**********************
 Ce document sert à exprimer des objections, remarques , etc...
 à propos des doc en attente de validation
 n'oubliez pas de préciser qui écrit
@@ -34,4 +34,7 @@ Romain "Je m'occupe de l'introduction générale."
 
 Diagramme classes
 romain "Dites moi ce que vous en pensez; je sais pas trop comment gérer les droits des employés; sinon les classes qui doivent etre sauvegarder implementent 'editable' mais je l'ai pas représenté pour la lisibilité"
-
+mehdi: j'ai mis des types unsigned int pour les dates (cherchez linux epoch ou http://www.epochconverter.com/)
+peut etre que ca serait bien de faire un typedef pour les permis (representes par un uint aussi)
+sinon il est niquel ton diagramme 
+apres puisque tout est en priv� je vais qd meme rajouter les getter et setters
