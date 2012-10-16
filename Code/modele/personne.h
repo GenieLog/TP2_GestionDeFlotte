@@ -15,9 +15,10 @@ private:
     QString nom;
     QString prenom;
     bool sexe; // 0 = Homme, 1=Femme
-    bool skipper;
     QString nationalite;
     QDate naissance;
+protected:
+    bool skipper;
 };
 
 class Skipper:Personne
