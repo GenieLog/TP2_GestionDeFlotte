@@ -10,6 +10,7 @@ class Personne
 {
 public:
     Personne(QString _nom, QString _Prenom, bool _sexe);
+    bool isSkipper() { return false;}
 private:
     QString nom;
     QString prenom;
@@ -21,14 +22,15 @@ private:
 class Skipper:Personne
 {
 public:
-    Skipper();
+    Skipper(QString _nom, QString _Prenom, bool _sexe);
     ~Skipper();
+    bool isSkipper() { return false;}
 };
 
 class Employe:Personne
 {
 public:
-    Employe();
+    Employe(QString _nom, QString _Prenom, bool _sexe, QString _poste);
     ~Employe();
     QString poste;
 

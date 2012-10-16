@@ -3,6 +3,8 @@
 
 #include <QVector>
 #include <QDateTime>
+#include "modele/bateau.h"
+#include "modele/personne.h"
 //#include <unistd.h> // pour le time_t si on s'en sert
 
 class Escale
@@ -26,8 +28,8 @@ private:
     QDateTime depart;
     QDateTime arrivee;
     QVector<Escale*> escales;
-//    Skiper* skipper;
-//    Bateau* bateau;
+    Skipper* skipper;
+    Bateau* bateau;
 };
 
 #endif // BALADE_H
