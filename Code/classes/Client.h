@@ -3,12 +3,12 @@
 #define CLIENT_H
 #include "Personne.h"
 
-#include <string.h>
-#include vector.h
+#include <string>
+#include vector
 
 #include "Balade.h"
 class Balade;
-#include "Permis.h"
+#include "undef.h"
 
 
 /**
@@ -20,184 +20,184 @@ class Client : virtual public Personne
 {
 public:
 
-				// Constructors/Destructors
-				//  
+  // Constructors/Destructors
+  //  
 
 
-				/**
-				 * Empty Constructor
-				 */
-				Client ( );
+  /**
+   * Empty Constructor
+   */
+  Client ( );
 
-				/**
-				 * Empty Destructor
-				 */
-				virtual ~Client ( );
+  /**
+   * Empty Destructor
+   */
+  virtual ~Client ( );
 
-				// Static Public attributes
-				//  
+  // Static Public attributes
+  //  
 
-				// Public attributes
-				//  
-
-
-				vector<Balade*> m_baladesascapitVector;
-
-				vector<Balade*> m_baladesasaccompVector;
-
-				vector<Permis*> m_permisVector;
-
-				// Public attribute accessor methods
-				//  
+  // Public attributes
+  //  
 
 
-				// Public attribute accessor methods
-				//  
+  vector<Balade*> m_baladesascapitVector;
+
+  vector<Balade*> m_baladesasaccompVector;
+
+  vector<undef*> m_permisVector;
+
+  // Public attribute accessor methods
+  //  
 
 
-				/**
-				 * Add a BaladesAsCapit object to the m_baladesascapitVector List
-				 */
-				void addBaladesAsCapit ( Balade * add_object );
-
-				/**
-				 * Remove a BaladesAsCapit object from m_baladesascapitVector List
-				 */
-				void removeBaladesAsCapit ( Balade * remove_object );
-
-				/**
-				 * Get the list of BaladesAsCapit objects held by m_baladesascapitVector
-				 * \return vector<Balade *> list of BaladesAsCapit objects held by
-				 * m_baladesascapitVector
-				 */
-				vector<Balade *> getBaladesAsCapitList ( );
-
-				/**
-				 * Add a BaladesAsAccomp object to the m_baladesasaccompVector List
-				 */
-				void addBaladesAsAccomp ( Balade * add_object );
-
-				/**
-				 * Remove a BaladesAsAccomp object from m_baladesasaccompVector List
-				 */
-				void removeBaladesAsAccomp ( Balade * remove_object );
-
-				/**
-				 * Get the list of BaladesAsAccomp objects held by m_baladesasaccompVector
-				 * \return vector<Balade *> list of BaladesAsAccomp objects held by
-				 * m_baladesasaccompVector
-				 */
-				vector<Balade *> getBaladesAsAccompList ( );
-
-				/**
-				 * Add a Permis object to the m_permisVector List
-				 */
-				void addPermis ( Permis * add_object );
-
-				/**
-				 * Remove a Permis object from m_permisVector List
-				 */
-				void removePermis ( Permis * remove_object );
-
-				/**
-				 * Get the list of Permis objects held by m_permisVector
-				 * \return vector<Permis *> list of Permis objects held by m_permisVector
-				 */
-				vector<Permis *> getPermisList ( );
+  // Public attribute accessor methods
+  //  
 
 
-				/**
-				 * \param  id_balade
-				 */
-				void add_balade (int id_balade )
-				{
-				}
+  /**
+   * Add a BaladesAsCapit object to the m_baladesascapitVector List
+   */
+  void addBaladesAsCapit ( Balade * add_object );
+
+  /**
+   * Remove a BaladesAsCapit object from m_baladesascapitVector List
+   */
+  void removeBaladesAsCapit ( Balade * remove_object );
+
+  /**
+   * Get the list of BaladesAsCapit objects held by m_baladesascapitVector
+   * @return vector<Balade *> list of BaladesAsCapit objects held by
+   * m_baladesascapitVector
+   */
+  vector<Balade *> getBaladesAsCapitList ( );
+
+  /**
+   * Add a BaladesAsAccomp object to the m_baladesasaccompVector List
+   */
+  void addBaladesAsAccomp ( Balade * add_object );
+
+  /**
+   * Remove a BaladesAsAccomp object from m_baladesasaccompVector List
+   */
+  void removeBaladesAsAccomp ( Balade * remove_object );
+
+  /**
+   * Get the list of BaladesAsAccomp objects held by m_baladesasaccompVector
+   * @return vector<Balade *> list of BaladesAsAccomp objects held by
+   * m_baladesasaccompVector
+   */
+  vector<Balade *> getBaladesAsAccompList ( );
+
+  /**
+   * Add a Permis object to the m_permisVector List
+   */
+  void addPermis ( undef * add_object );
+
+  /**
+   * Remove a Permis object from m_permisVector List
+   */
+  void removePermis ( undef * remove_object );
+
+  /**
+   * Get the list of Permis objects held by m_permisVector
+   * @return vector<undef *> list of Permis objects held by m_permisVector
+   */
+  vector<undef *> getPermisList ( );
+
+
+  /**
+   * @param  id_balade
+   */
+  void add_balade (int id_balade )
+  {
+  }
 
 protected:
 
-				// Static Protected attributes
-				//  
+  // Static Protected attributes
+  //  
 
-				// Protected attributes
-				//  
+  // Protected attributes
+  //  
 
 public:
 
 
-				// Protected attribute accessor methods
-				//  
+  // Protected attribute accessor methods
+  //  
 
 protected:
 
 public:
 
 
-				// Protected attribute accessor methods
-				//  
+  // Protected attribute accessor methods
+  //  
 
 protected:
 
 
 private:
 
-				// Static Private attributes
-				//  
+  // Static Private attributes
+  //  
 
-				// Private attributes
-				//  
+  // Private attributes
+  //  
 
-				unsigned int id_client;
-				string permis;
+  unsigned int id_client;
+  string permis;
 public:
 
 
-				// Private attribute accessor methods
-				//  
+  // Private attribute accessor methods
+  //  
 
 private:
 
 public:
 
 
-				// Private attribute accessor methods
-				//  
+  // Private attribute accessor methods
+  //  
 
 
-				/**
-				 * Set the value of id_client
-				 * \param new_var the new value of id_client
-				 */
-				void setId_client ( unsigned int new_var )				 {
-												id_client = new_var;
-				}
+  /**
+   * Set the value of id_client
+   * @param new_var the new value of id_client
+   */
+  void setId_client ( unsigned int new_var )   {
+      id_client = new_var;
+  }
 
-				/**
-				 * Get the value of id_client
-				 * \return the value of id_client
-				 */
-				unsigned int getId_client ( )				 {
-								return id_client;
-				}
+  /**
+   * Get the value of id_client
+   * @return the value of id_client
+   */
+  unsigned int getId_client ( )   {
+    return id_client;
+  }
 
-				/**
-				 * Set the value of permis
-				 * \param new_var the new value of permis
-				 */
-				void setPermis ( string new_var )				 {
-												permis = new_var;
-				}
+  /**
+   * Set the value of permis
+   * @param new_var the new value of permis
+   */
+  void setPermis ( string new_var )   {
+      permis = new_var;
+  }
 
-				/**
-				 * Get the value of permis
-				 * \return the value of permis
-				 */
-				string getPermis ( )				 {
-								return permis;
-				}
+  /**
+   * Get the value of permis
+   * @return the value of permis
+   */
+  string getPermis ( )   {
+    return permis;
+  }
 private:
 
 
-				void initAttributes ( ) ;
+  void initAttributes ( ) ;
 
 };
 

@@ -2,10 +2,10 @@
 #ifndef TYPEBATEAU_H
 #define TYPEBATEAU_H
 
-#include <string.h>
-#include vector.h
+#include <string>
+#include vector
 
-#include "Permis.h"
+#include "undef.h"
 
 
 /**
@@ -17,172 +17,172 @@ class TypeBateau
 {
 public:
 
-				// Constructors/Destructors
-				//  
+  // Constructors/Destructors
+  //  
 
 
-				/**
-				 * Empty Constructor
-				 */
-				TypeBateau ( );
+  /**
+   * Empty Constructor
+   */
+  TypeBateau ( );
 
-				/**
-				 * Empty Destructor
-				 */
-				virtual ~TypeBateau ( );
+  /**
+   * Empty Destructor
+   */
+  virtual ~TypeBateau ( );
 
-				// Static Public attributes
-				//  
+  // Static Public attributes
+  //  
 
-				// Public attributes
-				//  
-
-
-				vector<Permis*> m_permisVector;
-
-				// Public attribute accessor methods
-				//  
+  // Public attributes
+  //  
 
 
-				// Public attribute accessor methods
-				//  
+  vector<undef*> m_permisVector;
+
+  // Public attribute accessor methods
+  //  
 
 
-				/**
-				 * Add a Permis object to the m_permisVector List
-				 */
-				void addPermis ( Permis * add_object );
+  // Public attribute accessor methods
+  //  
 
-				/**
-				 * Remove a Permis object from m_permisVector List
-				 */
-				void removePermis ( Permis * remove_object );
 
-				/**
-				 * Get the list of Permis objects held by m_permisVector
-				 * \return vector<Permis *> list of Permis objects held by m_permisVector
-				 */
-				vector<Permis *> getPermisList ( );
+  /**
+   * Add a Permis object to the m_permisVector List
+   */
+  void addPermis ( undef * add_object );
+
+  /**
+   * Remove a Permis object from m_permisVector List
+   */
+  void removePermis ( undef * remove_object );
+
+  /**
+   * Get the list of Permis objects held by m_permisVector
+   * @return vector<undef *> list of Permis objects held by m_permisVector
+   */
+  vector<undef *> getPermisList ( );
 
 protected:
 
-				// Static Protected attributes
-				//  
+  // Static Protected attributes
+  //  
 
-				// Protected attributes
-				//  
+  // Protected attributes
+  //  
 
 public:
 
 
-				// Protected attribute accessor methods
-				//  
+  // Protected attribute accessor methods
+  //  
 
 protected:
 
 public:
 
 
-				// Protected attribute accessor methods
-				//  
+  // Protected attribute accessor methods
+  //  
 
 protected:
 
 
 private:
 
-				// Static Private attributes
-				//  
+  // Static Private attributes
+  //  
 
-				// Private attributes
-				//  
+  // Private attributes
+  //  
 
-				unsigned int id_type;
-				unsigned int cylindre;
-				bool voile;
-				string permis;
+  unsigned int id_type;
+  unsigned int cylindre;
+  bool voile;
+  string permis;
 public:
 
 
-				// Private attribute accessor methods
-				//  
+  // Private attribute accessor methods
+  //  
 
 private:
 
 public:
 
 
-				// Private attribute accessor methods
-				//  
+  // Private attribute accessor methods
+  //  
 
 
-				/**
-				 * Set the value of id_type
-				 * \param new_var the new value of id_type
-				 */
-				void setId_type ( unsigned int new_var )				 {
-												id_type = new_var;
-				}
+  /**
+   * Set the value of id_type
+   * @param new_var the new value of id_type
+   */
+  void setId_type ( unsigned int new_var )   {
+      id_type = new_var;
+  }
 
-				/**
-				 * Get the value of id_type
-				 * \return the value of id_type
-				 */
-				unsigned int getId_type ( )				 {
-								return id_type;
-				}
+  /**
+   * Get the value of id_type
+   * @return the value of id_type
+   */
+  unsigned int getId_type ( )   {
+    return id_type;
+  }
 
-				/**
-				 * Set the value of cylindre
-				 * \param new_var the new value of cylindre
-				 */
-				void setCylindre ( unsigned int new_var )				 {
-												cylindre = new_var;
-				}
+  /**
+   * Set the value of cylindre
+   * @param new_var the new value of cylindre
+   */
+  void setCylindre ( unsigned int new_var )   {
+      cylindre = new_var;
+  }
 
-				/**
-				 * Get the value of cylindre
-				 * \return the value of cylindre
-				 */
-				unsigned int getCylindre ( )				 {
-								return cylindre;
-				}
+  /**
+   * Get the value of cylindre
+   * @return the value of cylindre
+   */
+  unsigned int getCylindre ( )   {
+    return cylindre;
+  }
 
-				/**
-				 * Set the value of voile
-				 * \param new_var the new value of voile
-				 */
-				void setVoile ( bool new_var )				 {
-												voile = new_var;
-				}
+  /**
+   * Set the value of voile
+   * @param new_var the new value of voile
+   */
+  void setVoile ( bool new_var )   {
+      voile = new_var;
+  }
 
-				/**
-				 * Get the value of voile
-				 * \return the value of voile
-				 */
-				bool getVoile ( )				 {
-								return voile;
-				}
+  /**
+   * Get the value of voile
+   * @return the value of voile
+   */
+  bool getVoile ( )   {
+    return voile;
+  }
 
-				/**
-				 * Set the value of permis
-				 * \param new_var the new value of permis
-				 */
-				void setPermis ( string new_var )				 {
-												permis = new_var;
-				}
+  /**
+   * Set the value of permis
+   * @param new_var the new value of permis
+   */
+  void setPermis ( string new_var )   {
+      permis = new_var;
+  }
 
-				/**
-				 * Get the value of permis
-				 * \return the value of permis
-				 */
-				string getPermis ( )				 {
-								return permis;
-				}
+  /**
+   * Get the value of permis
+   * @return the value of permis
+   */
+  string getPermis ( )   {
+    return permis;
+  }
 private:
 
 
-				void initAttributes ( ) ;
+  void initAttributes ( ) ;
 
 };
 
