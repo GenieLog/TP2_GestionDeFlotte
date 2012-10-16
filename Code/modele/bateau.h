@@ -24,12 +24,14 @@ class Bateau
 {
 public:
     Bateau();
-    QString getMarque(void);
-    QDate getMiseEnEau(void);
+    QString getMarque(void) { return this->marque; }
+    QDate getMiseEnEau(void) { return this->mise_en_eau; }
+    TypeBateau getTypeBateau(void) { return this->type_bateau; }
 private:
     unsigned int id_bateau;
     QString marque;
     QDate mise_en_eau;
+    TypeBateau type_bateau;
 
 };
 

@@ -18,13 +18,19 @@ private:
     QDate naissance;
 };
 
-class skipper:Personne
+class Skipper:Personne
 {
-
+public:
+    Skipper();
+    ~Skipper();
 };
 
-class Emplaye:Personne
+class Employe:Personne
 {
+public:
+    Employe();
+    ~Employe();
+    QString poste;
 
 };
 
