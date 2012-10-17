@@ -3,11 +3,11 @@
 #define EMPLOYE_H
 #include "Personne.h"
 
-#include <string>
+#include <Qstring>
 
 /**
   * class Employe
-  * 
+  *
   */
 
 class Employe : virtual public Personne
@@ -15,7 +15,7 @@ class Employe : virtual public Personne
 public:
 
   // Constructors/Destructors
-  //  
+  //
 
 
   /**
@@ -29,33 +29,6 @@ public:
   virtual ~Employe ( );
 
   // Static Public attributes
-  //  
-
-  // Public attributes
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-  // Public attribute accessor methods
-  //  
-
-
-protected:
-
-  // Static Protected attributes
-  //  
-
-  // Protected attributes
-  //  
-
-public:
-
-
-  // Protected attribute accessor methods
-  //  
 
 protected:
 
@@ -63,7 +36,7 @@ public:
 
 
   // Protected attribute accessor methods
-  //  
+  //
 
 protected:
 
@@ -71,11 +44,11 @@ protected:
 private:
 
   // Static Private attributes
-  //  
+  //
 
   static string postes_;
   // Private attributes
-  //  
+  //
 
   unsigned int id_employe;
   string poste;
@@ -83,7 +56,7 @@ public:
 
 
   // Private attribute accessor methods
-  //  
+  //
 
 
   /**
@@ -99,7 +72,7 @@ public:
 
 
   // Private attribute accessor methods
-  //  
+  //
 
 
   /**
@@ -141,3 +114,4 @@ private:
 };
 
 #endif // EMPLOYE_H
+
