@@ -28,14 +28,5 @@ HEADERS  += mainwindow.h \
     modele/client.h \
     serializable.h
 
-FORMS    += mainwindow.ui
-
-
-
-
-
-
-
-
-
-
+FORMS    += mainwindow.ui \
+    clients.ui
