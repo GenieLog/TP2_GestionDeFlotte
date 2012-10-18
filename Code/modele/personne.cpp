@@ -1,28 +1,13 @@
-#include "personne.h"
+#include "modele/personne.h"
 
 #include <QString>
 
-Personne::Personne(QString _nom, QString _prenom, bool _sexe)
+Personne::Personne(QString nom, QString prenom, bool sexe, QString nationalite, QDate naissance)
 {
-    this->nom = _nom;
-    this->prenom = _prenom;
-    this->sexe = _sexe;
-    this->naissance = QDate();
-    this->nationalite = QString();
-    this->skipper = false;
-}
-
-Skipper::Skipper(QString _nom, QString _prenom, bool _sexe):Personne(_nom, _prenom, _sexe)
-{
-    this->skipper = true;
-}
-
-Employe::Employe(QString _nom, QString _prenom, bool _sexe, QString _poste):Personne(_nom, _prenom, _sexe)
-{
-    this->poste = QString(_poste);
-}
-
-Client::Client(QString _nom, QString _prenom, bool _sexe):Personne(_nom, _prenom, _sexe)
-{
-    this->permis = AUCUN;
+    _nom = nom;
+    _prenom = prenom;
+    _sexe = sexe;
+    _naissance = naissance;
+    _nationalite = nationalite;
+    _skipper = false;
 }
