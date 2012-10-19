@@ -3,8 +3,9 @@
 
 #include <QVector>
 #include <QDateTime>
+#include "modele/skipper.h"
 #include "modele/bateau.h"
-#include "modele/personne.h"
+#include "modele/client.h"
 //#include <unistd.h> // pour le time_t si on s'en sert
 
 class Escale
