@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     modele/skipper.cpp \
     modele/employe.cpp \
     modele/client.cpp \
-    formclient.cpp
+    formclient.cpp \
+    formbateau.cpp
 
 HEADERS  += mainwindow.h \
     modele/personne.h \
@@ -28,9 +29,9 @@ HEADERS  += mainwindow.h \
     modele/employe.h \
     modele/client.h \
     serializable.h \
-    formclient.h
+    formclient.h \
+    formbateau.h
 
 FORMS    += mainwindow.ui \
-    clientsform.ui \
-    bateauform.ui \
-    formclient.ui
+    formclient.ui \
+    formbateau.ui

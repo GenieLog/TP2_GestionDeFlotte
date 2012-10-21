@@ -9,7 +9,7 @@ class Personne
 protected:
     QString _nom;
     QString _prenom;
-    bool _sexe; // 0 = Homme, 1=Femme
+    bool _sexe; // 1 = Homme, 0=Femme
     QString _nationalite;
     QDate _naissance;
     bool _skipper;

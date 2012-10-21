@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "formclient.h"
+#include "formbateau.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -15,6 +17,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    /*for w;
-    w.show();*/
+    FormClient *w = new FormClient();
+    w->show();
+
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    FormBateau *w = new FormBateau();
+    w->show();
 }

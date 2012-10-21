@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'formclient.ui'
 **
-** Created: Sun Oct 21 17:53:45 2012
+** Created: Sun Oct 21 18:31:45 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -35,11 +35,11 @@ public:
     QWidget *layoutWidget;
     QFormLayout *formLayout;
     QLabel *label;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *nom_cl;
+    QLineEdit *prenom_cl;
     QDateEdit *dateEdit;
     QComboBox *comboBox;
-    QLineEdit *lineEdit_3;
+    QLineEdit *natio_cl;
     QLabel *label_2;
     QLabel *label_4;
     QLabel *label_3;
@@ -71,15 +71,15 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label);
 
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        nom_cl = new QLineEdit(layoutWidget);
+        nom_cl->setObjectName(QString::fromUtf8("nom_cl"));
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
+        formLayout->setWidget(0, QFormLayout::FieldRole, nom_cl);
 
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        prenom_cl = new QLineEdit(layoutWidget);
+        prenom_cl->setObjectName(QString::fromUtf8("prenom_cl"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, lineEdit_2);
+        formLayout->setWidget(2, QFormLayout::FieldRole, prenom_cl);
 
         dateEdit = new QDateEdit(layoutWidget);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
@@ -91,10 +91,10 @@ public:
 
         formLayout->setWidget(6, QFormLayout::FieldRole, comboBox);
 
-        lineEdit_3 = new QLineEdit(layoutWidget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        natio_cl = new QLineEdit(layoutWidget);
+        natio_cl->setObjectName(QString::fromUtf8("natio_cl"));
 
-        formLayout->setWidget(8, QFormLayout::FieldRole, lineEdit_3);
+        formLayout->setWidget(8, QFormLayout::FieldRole, natio_cl);
 
         label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
