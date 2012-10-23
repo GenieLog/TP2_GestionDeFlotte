@@ -1,4 +1,5 @@
 #include "modele/client.h"
+#include <QTextStream>
 
 QFile Serializable::savefile("bdd/clients.txt");
 Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDate naissance)
@@ -11,11 +12,21 @@ void Client::load(QDataStream & in)
     in >> _nom >> _prenom >> _sexe >> _nationalite >> _naissance >> _skipper ; //permis.load();
 }
 
-void Client::save()
+bool Client::save()
 {
-    this->savefile.open(QIODevice::WriteOnly);
-    QDataStream out(&this->savefile);
-    out << _nom << _prenom << _sexe << _nationalite << _naissance ;
+    QFile file("bdd/clients.txt");
 
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
+        return false;
+
+
+    QTextStream flux(&file);
+
+    flux.setCodec("UTF-8");
+
+    flux << _nom << "   " << _prenom << "  " << _sexe << "  " << _nationalite << "  " << endl;
+
+    return true;
 }
+
 

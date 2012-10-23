@@ -10,7 +10,7 @@ public:
     Client(QString _nom, QString _prenom, bool _sexe, QString _nationalite, QDate _naissance);
     void setPermis(QString permis){ _permis = permis; }
     virtual void load(QDataStream & i);
-    virtual void save();
+    virtual bool save();
 private:
     QString _permis;
 };
