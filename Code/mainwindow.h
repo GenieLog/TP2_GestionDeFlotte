@@ -41,6 +41,10 @@ private slots:
     void affiche_tableClient();
     void on_tableClient_activated(const QModelIndex &index);
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     void ajouteLigneClient(Client* c);

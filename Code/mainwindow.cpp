@@ -27,7 +27,7 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
 {
     int row = ui->tableClient->rowCount();
     ui->tableClient->insertRow(row);
-    ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
+//    ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
     if(c)
     {
         ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
@@ -107,4 +107,21 @@ void MainWindow::affiche_tableClient()
         ajouteLigneClient(clients[i]);
     }
     ui->tableClient->update();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    int row=ui->tableClient->currentRow();
+    // editer client
+    qDebug() << "current row "<< row;
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    int row=ui->tableClient->currentRow();
+    // supprimer client
+    ui->tableClient->removeRow(ui->tableClient->currentRow());
+    delete clients[row];
+    clients.remove(row);
+
 }
