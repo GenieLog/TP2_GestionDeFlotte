@@ -5,9 +5,11 @@
 #include <qvector.h>
 #include <qmap.h>
 
+#include <QModelIndex>
+#include <QTableWidgetItem>
+
 #include "modele/bateau.h"
 #include "modele/client.h"
-
 
 namespace Ui {
     class MainWindow;
@@ -31,6 +33,9 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_4_clicked();
+
+
+    void on_tableClient_activated(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;

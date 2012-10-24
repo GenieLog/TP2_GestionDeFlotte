@@ -1,10 +1,11 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 #include "modele/personne.h"
+#include <QTableWidgetItem>
 
 #include "serializable.h"
 
-class Client : public Serializable, protected Personne
+class Client : public Serializable, public Personne
 {
 public:
     Client(QString _nom, QString _prenom, bool _sexe, QString _nationalite, QDate _naissance);

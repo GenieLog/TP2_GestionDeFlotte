@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -129,6 +129,11 @@
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>29</number>
       </attribute>
+      <row>
+       <property name="text">
+        <string>TesT</string>
+       </property>
+      </row>
       <column>
        <property name="text">
         <string>ID</string>

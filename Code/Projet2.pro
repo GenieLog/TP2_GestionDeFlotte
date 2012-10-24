@@ -8,7 +8,7 @@ QT       += core gui
 
 TARGET = Projet2
 TEMPLATE = app
-
+CONFIG += debug console
 
 SOURCES += main.cpp\
         mainwindow.cpp \
