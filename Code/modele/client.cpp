@@ -10,6 +10,24 @@ Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDat
 {_skipper = false;
 }
 
+QString Client::getPermis()
+{
+    QString str;
+    switch (this->_permis)
+    {
+    case P_HAUTURIER:
+        str = "Hauturier";
+        break;
+    case P_COTIER:
+        str = "cotier";
+        break;
+    default:
+        str="Aucun";
+        break;
+    }
+
+    return str;
+}
 void Client::load(QDataStream & in)
 {
     in >> _nom >> _prenom >> _sexe >> _nationalite >> _naissance >> _skipper ; //permis.load();

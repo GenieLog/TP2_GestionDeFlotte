@@ -129,11 +129,6 @@
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>29</number>
       </attribute>
-      <row>
-       <property name="text">
-        <string>TesT</string>
-       </property>
-      </row>
       <column>
        <property name="text">
         <string>ID</string>

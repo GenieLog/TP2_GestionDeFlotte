@@ -7,17 +7,19 @@ FormClient::FormClient(QWidget *parent) :
     ui(new Ui::FormClient)
 {
     ui->setupUi(this);
-    client = NULL;
 }
 
 FormClient::~FormClient()
 {
+    this->hide();
     delete ui;
 }
 
 void FormClient::on_pushButton_clicked()
 {
+    delete client;
     this->hide();
+    delete this;
 }
 
 
@@ -35,10 +37,18 @@ void FormClient::on_pushButton_2_clicked()
     bool sex (ui->radioButton->isChecked());
     QDate birth (ui->dateEdit->date());
     client = new Client(nom,prenom,sex,natio,birth);
-   if(client->save())
-    this->hide();
-   if(client)
-       emit clientAdded(this);//clientAdded(this);
+    if(client) {
+        if(ui->comboBox->currentIndex()==0x02)
+            client->setPermis(P_HAUTURIER);
+        if(ui->comboBox->currentIndex()==0x01)
+            client->setPermis(P_COTIER);
+        else
+            this->client->setPermis(AUCUN);
+        emit clientAdded(this);//clientAdded(this);
+    }
 
+}
 
+void FormClient::on_comboBox_currentIndexChanged(const QString &arg1)
+{
 }
