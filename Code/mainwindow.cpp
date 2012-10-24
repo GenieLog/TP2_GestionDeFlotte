@@ -32,7 +32,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    /*
+
     FormClient *w = new FormClient();
     w->show();
     // ajout dans la liste globale des clients
@@ -40,11 +40,11 @@ void MainWindow::on_pushButton_clicked()
         this->clients.append(w->client);
         // update affichage
         ajouteLigneClient(w->client);
-        ui->tableClient->update();
+     //   ui->tableClient->update();
         //affiche_tableClient();
 
-    }*/
-    ajouteLigneClient(NULL);
+    }
+   // ajouteLigneClient(NULL);
 
 }
 
@@ -55,9 +55,9 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
     ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
     if(c)
     {
-        ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
+ /*       ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
         ui->tableClient->setItem(row,2, new QTableWidgetItem( c->getPrenom()));
-/*        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
+        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
         ui->tableClient->setItem(row,4, new QTableWidgetItem( c->getNationalite()));
         ui->tableClient->setItem(row,5, new QTableWidgetItem( c->getPrenom()));
 */    }

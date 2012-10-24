@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Oct 23 22:26:07 2012
+** Created: Wed Oct 24 12:58:29 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -40,12 +40,12 @@ public:
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
     QWidget *tab;
-    QTableWidget *tableWidget;
+    QTableWidget *tableClient;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QWidget *tab_2;
-    QTableWidget *tableWidget_2;
+    QTableWidget *tableBateau;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
@@ -101,25 +101,29 @@ public:
         tabWidget->addTab(tab_4, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
-        tableWidget = new QTableWidget(tab);
-        if (tableWidget->columnCount() < 6)
-            tableWidget->setColumnCount(6);
+        tableClient = new QTableWidget(tab);
+        if (tableClient->columnCount() < 6)
+            tableClient->setColumnCount(6);
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem6);
+        tableClient->setHorizontalHeaderItem(0, __qtablewidgetitem6);
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem7);
+        tableClient->setHorizontalHeaderItem(1, __qtablewidgetitem7);
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem8);
+        tableClient->setHorizontalHeaderItem(2, __qtablewidgetitem8);
         QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem9);
+        tableClient->setHorizontalHeaderItem(3, __qtablewidgetitem9);
         QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem10);
+        tableClient->setHorizontalHeaderItem(4, __qtablewidgetitem10);
         QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem11);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 70, 951, 321));
-        tableWidget->horizontalHeader()->setDefaultSectionSize(100);
-        tableWidget->horizontalHeader()->setMinimumSectionSize(29);
+        tableClient->setHorizontalHeaderItem(5, __qtablewidgetitem11);
+        if (tableClient->rowCount() < 1)
+            tableClient->setRowCount(1);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        tableClient->setVerticalHeaderItem(0, __qtablewidgetitem12);
+        tableClient->setObjectName(QString::fromUtf8("tableClient"));
+        tableClient->setGeometry(QRect(10, 70, 951, 321));
+        tableClient->horizontalHeader()->setDefaultSectionSize(100);
+        tableClient->horizontalHeader()->setMinimumSectionSize(29);
         pushButton = new QPushButton(tab);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(30, 20, 101, 27));
@@ -132,21 +136,21 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tableWidget_2 = new QTableWidget(tab_2);
-        if (tableWidget_2->columnCount() < 5)
-            tableWidget_2->setColumnCount(5);
-        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem12);
+        tableBateau = new QTableWidget(tab_2);
+        if (tableBateau->columnCount() < 5)
+            tableBateau->setColumnCount(5);
         QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem13);
+        tableBateau->setHorizontalHeaderItem(0, __qtablewidgetitem13);
         QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem14);
+        tableBateau->setHorizontalHeaderItem(1, __qtablewidgetitem14);
         QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem15);
+        tableBateau->setHorizontalHeaderItem(2, __qtablewidgetitem15);
         QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(4, __qtablewidgetitem16);
-        tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(10, 100, 651, 251));
+        tableBateau->setHorizontalHeaderItem(3, __qtablewidgetitem16);
+        QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
+        tableBateau->setHorizontalHeaderItem(4, __qtablewidgetitem17);
+        tableBateau->setObjectName(QString::fromUtf8("tableBateau"));
+        tableBateau->setGeometry(QRect(10, 100, 651, 251));
         pushButton_4 = new QPushButton(tab_2);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
         pushButton_4->setGeometry(QRect(30, 40, 121, 27));
@@ -163,7 +167,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 991, 25));
+        menuBar->setGeometry(QRect(0, 0, 991, 26));
         menuFichier = new QMenu(menuBar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuStatistiques = new QMenu(menuBar);
@@ -183,7 +187,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -210,32 +214,34 @@ public:
         pushButton_8->setText(QApplication::translate("MainWindow", "Editer", 0, QApplication::UnicodeUTF8));
         pushButton_9->setText(QApplication::translate("MainWindow", "Annuler", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "R\303\251servations", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(0);
+        QTableWidgetItem *___qtablewidgetitem6 = tableClient->horizontalHeaderItem(0);
         ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "ID", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->horizontalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem7 = tableClient->horizontalHeaderItem(1);
         ___qtablewidgetitem7->setText(QApplication::translate("MainWindow", "Nom", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem8 = tableWidget->horizontalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem8 = tableClient->horizontalHeaderItem(2);
         ___qtablewidgetitem8->setText(QApplication::translate("MainWindow", "Pr\303\251nom", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem9 = tableWidget->horizontalHeaderItem(3);
+        QTableWidgetItem *___qtablewidgetitem9 = tableClient->horizontalHeaderItem(3);
         ___qtablewidgetitem9->setText(QApplication::translate("MainWindow", "Date de naissance", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem10 = tableWidget->horizontalHeaderItem(4);
+        QTableWidgetItem *___qtablewidgetitem10 = tableClient->horizontalHeaderItem(4);
         ___qtablewidgetitem10->setText(QApplication::translate("MainWindow", "Permis", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem11 = tableWidget->horizontalHeaderItem(5);
+        QTableWidgetItem *___qtablewidgetitem11 = tableClient->horizontalHeaderItem(5);
         ___qtablewidgetitem11->setText(QApplication::translate("MainWindow", "Derni\303\250re balade", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem12 = tableClient->verticalHeaderItem(0);
+        ___qtablewidgetitem12->setText(QApplication::translate("MainWindow", "TesT", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("MainWindow", "Ajouter client", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("MainWindow", "Editer", 0, QApplication::UnicodeUTF8));
         pushButton_3->setText(QApplication::translate("MainWindow", "Supprimer", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Clients", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem12 = tableWidget_2->horizontalHeaderItem(0);
-        ___qtablewidgetitem12->setText(QApplication::translate("MainWindow", "Nom", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem13 = tableWidget_2->horizontalHeaderItem(1);
-        ___qtablewidgetitem13->setText(QApplication::translate("MainWindow", "Type", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem14 = tableWidget_2->horizontalHeaderItem(2);
-        ___qtablewidgetitem14->setText(QApplication::translate("MainWindow", "Nouvelle colonne", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem15 = tableWidget_2->horizontalHeaderItem(3);
-        ___qtablewidgetitem15->setText(QApplication::translate("MainWindow", "Heures d'util.", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem16 = tableWidget_2->horizontalHeaderItem(4);
-        ___qtablewidgetitem16->setText(QApplication::translate("MainWindow", "Disponible", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem13 = tableBateau->horizontalHeaderItem(0);
+        ___qtablewidgetitem13->setText(QApplication::translate("MainWindow", "Nom", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem14 = tableBateau->horizontalHeaderItem(1);
+        ___qtablewidgetitem14->setText(QApplication::translate("MainWindow", "Type", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem15 = tableBateau->horizontalHeaderItem(2);
+        ___qtablewidgetitem15->setText(QApplication::translate("MainWindow", "Nouvelle colonne", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem16 = tableBateau->horizontalHeaderItem(3);
+        ___qtablewidgetitem16->setText(QApplication::translate("MainWindow", "Heures d'util.", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem17 = tableBateau->horizontalHeaderItem(4);
+        ___qtablewidgetitem17->setText(QApplication::translate("MainWindow", "Disponible", 0, QApplication::UnicodeUTF8));
         pushButton_4->setText(QApplication::translate("MainWindow", "Ajouter Bateau", 0, QApplication::UnicodeUTF8));
         pushButton_5->setText(QApplication::translate("MainWindow", "Supprimer", 0, QApplication::UnicodeUTF8));
         pushButton_6->setText(QApplication::translate("MainWindow", "Editer", 0, QApplication::UnicodeUTF8));

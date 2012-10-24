@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Tue Oct 23 22:28:03 2012
+** Created: Wed Oct 24 14:19:15 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,6 +33,8 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
       36,   11,   11,   11, 0x08,
+      62,   11,   11,   11, 0x08,
+      90,   84,   11,   11, 0x08,
 
        0        // eod
 };
@@ -40,6 +42,8 @@ static const uint qt_meta_data_MainWindow[] = {
 static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0on_pushButton_clicked()\0"
     "on_pushButton_4_clicked()\0"
+    "affiche_tableClient()\0index\0"
+    "on_tableClient_activated(QModelIndex)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -73,9 +77,11 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: on_pushButton_clicked(); break;
         case 1: on_pushButton_4_clicked(); break;
+        case 2: affiche_tableClient(); break;
+        case 3: on_tableClient_activated((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }
