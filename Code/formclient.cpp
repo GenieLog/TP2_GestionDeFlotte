@@ -34,7 +34,7 @@ void FormClient::on_pushButton_2_clicked()
     bool sex (ui->radioButton->isChecked());
     QDate birth (ui->dateEdit->date());
     client = new Client(nom,prenom,sex,natio,birth);
-//    if(client->save())
+   if(client->save())
     this->hide();
 
 

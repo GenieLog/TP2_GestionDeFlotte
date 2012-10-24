@@ -2,6 +2,7 @@
 #include <QTextStream>
 #include <QtCore>
 #include <QtDebug>
+#include <QRegExp>
 
 QFile Serializable::savefile("bdd/clients.txt");
 Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDate naissance)
@@ -27,13 +28,20 @@ bool Client::save()
 
  QString mot;
  QTextStream stream(&file);
+ qint32 max(0);
+ QRegExp idre("^([0-9]+)#");
  while(! stream.atEnd())
  {
     QString ligne = stream.readLine();
-    mot = ligne [0];
+
+    idre.indexIn(ligne);
+    mot = idre.cap(1);
+
+    ID=mot.toInt();
+    if(max<ID)
+        max =ID;
  }
 
- ID=mot.toInt(); qDebug() << mot;
  ID++;
 file.close();
     }
@@ -45,7 +53,7 @@ file.close();
 
     flux.setCodec("UTF-8");
 
-    flux << endl << ID <<"  " << _nom << "   " << _prenom << "  " << _sexe << "  " << _nationalite << "  " << endl;
+    flux  << ID <<"#" << _nom <<"#"<< _prenom <<"#" << _sexe  <<"#" << _nationalite << "#"<< _naissance.toString("d/M/yy") << endl;
     return true;
 }
 
