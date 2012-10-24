@@ -22,6 +22,7 @@ private:
     Ui::FormBateau *ui;
 
 private slots:
+    void on_doubleSpinBox_valueChanged(double );
     void on_pushButton_2_clicked();
 };
 

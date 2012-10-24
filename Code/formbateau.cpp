@@ -31,3 +31,12 @@ void FormBateau::on_pushButton_2_clicked()
     if (bateau->save())
         this->hide();
 }
+
+
+void FormBateau::on_doubleSpinBox_valueChanged(double k)
+{
+    ui->progressBar->setStyleSheet("background:none;");
+    ui->progressBar->setValue((int)k%100);
+    if(ui->progressBar->value()>85)
+        ui->progressBar->setStyleSheet("color:red;");
+}
