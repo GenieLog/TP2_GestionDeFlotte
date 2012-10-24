@@ -2,6 +2,7 @@
 #define FORMBATEAU_H
 
 #include <QWidget>
+#include "modele/bateau.h"
 
 namespace Ui {
     class FormBateau;
@@ -14,6 +15,8 @@ class FormBateau : public QWidget
 public:
     explicit FormBateau(QWidget *parent = 0);
     ~FormBateau();
+
+    Bateau *bateau;
 
 private:
     Ui::FormBateau *ui;

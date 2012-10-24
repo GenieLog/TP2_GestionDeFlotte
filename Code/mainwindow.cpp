@@ -32,6 +32,7 @@ void MainWindow::on_pushButton_clicked()
 {
     FormClient *w = new FormClient();
     w->show();
+    // ajout dans la liste globale des clients
     if (w->client) {
         this->clients.append(w->client);
         // update affichage
@@ -43,5 +44,10 @@ void MainWindow::on_pushButton_4_clicked()
 {
     FormBateau *w = new FormBateau();
     w->show();
+    // ajout dans la liste globale des clients
+    if (w->bateau) {
+        this->bateaux.append(w->bateau);
+        // update affichage
+    }
 }
 

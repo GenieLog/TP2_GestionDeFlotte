@@ -6,6 +6,7 @@ FormBateau::FormBateau(QWidget *parent) :
     ui(new Ui::FormBateau)
 {
     ui->setupUi(this);
+    bateau = NULL;
 }
 
 FormBateau::~FormBateau()
