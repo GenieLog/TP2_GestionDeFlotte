@@ -20,6 +20,7 @@ void FormClient::on_pushButton_clicked()
     this->hide();
 }
 
+
 /**
   *\brief fonction qui s'execute lors de l'appui sur le bouton de sauvegarde du formulaire de client
   *
@@ -36,6 +37,8 @@ void FormClient::on_pushButton_2_clicked()
     client = new Client(nom,prenom,sex,natio,birth);
    if(client->save())
     this->hide();
+   if(client)
+       emit clientAdded(this);//clientAdded(this);
 
 
 }

@@ -30,23 +30,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-
-    FormClient *w = new FormClient();
-    w->show();
-    // ajout dans la liste globale des clients
-    if (w->client) {
-        this->clients.append(w->client);
-        // update affichage
-        ajouteLigneClient(w->client);
-     //   ui->tableClient->update();
-        //affiche_tableClient();
-
-    }
-   // ajouteLigneClient(NULL);
-
-}
 
 void MainWindow::ajouteLigneClient(Client *c = NULL)
 {
@@ -55,15 +38,34 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
     ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
     if(c)
     {
- /*       ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
+        ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
         ui->tableClient->setItem(row,2, new QTableWidgetItem( c->getPrenom()));
-        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
+        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getNaissance().toString()));
+/*        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
         ui->tableClient->setItem(row,4, new QTableWidgetItem( c->getNationalite()));
-        ui->tableClient->setItem(row,5, new QTableWidgetItem( c->getPrenom()));
 */    }
     ui->tableClient->update();
 
 }
+
+void MainWindow::clientAdded(FormClient *form)
+{
+    this->clients.append(form->client);
+    ajouteLigneClient(form->client);
+    delete form;
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+
+    FormClient *w = new FormClient();
+    QObject::connect(w, SIGNAL(clientAdded(FormClient*)),
+                         this, SLOT(clientAdded(FormClient*)));
+
+    w->show();
+}
+
 void MainWindow::ajouteLigneBateau(Bateau *b = NULL)
 {
     int row = ui->tableBateau->rowCount();

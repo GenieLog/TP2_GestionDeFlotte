@@ -7,6 +7,7 @@
 
 #include <QModelIndex>
 #include <QTableWidgetItem>
+#include "formclient.h"
 
 #include "modele/bateau.h"
 #include "modele/client.h"
@@ -28,7 +29,9 @@ public:
     QVector<Client*> clients;
     // liste de toutes les assoviations pointeur-objets
     QMap<unsigned int, void*> pmap;
-
+public slots:
+    void clientAdded(FormClient *form);
+//    void bateauAdded();
 private slots:
     void on_pushButton_clicked();
 
