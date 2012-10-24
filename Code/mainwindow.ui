@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -128,6 +128,12 @@
       </attribute>
       <attribute name="horizontalHeaderMinimumSectionSize">
        <number>29</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>29</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
       </attribute>
       <column>
        <property name="text">
@@ -283,6 +289,85 @@
      <attribute name="title">
       <string>Balades</string>
      </attribute>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>161</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nouvelle Balade</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>931</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>Date début</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date fin</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Capitaine</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Bateau</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Balade</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Prix</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>410</y>
+        <width>97</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>410</y>
+        <width>97</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Annuler</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -292,7 +377,7 @@
      <x>0</x>
      <y>0</y>
      <width>991</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">
