@@ -57,8 +57,24 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
     {
         ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
         ui->tableClient->setItem(row,2, new QTableWidgetItem( c->getPrenom()));
-    }
+/*        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
+        ui->tableClient->setItem(row,4, new QTableWidgetItem( c->getNationalite()));
+        ui->tableClient->setItem(row,5, new QTableWidgetItem( c->getPrenom()));
+*/    }
     ui->tableClient->update();
+
+}
+void MainWindow::ajouteLigneBateau(Bateau *b = NULL)
+{
+    int row = ui->tableBateau->rowCount();
+    ui->tableBateau->insertRow(row);
+    ui->tableBateau->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
+    if(b)
+    {
+        ui->tableBateau->setItem(row,1, new QTableWidgetItem(b->getMarque()));
+//        ui->tableBateau->setItem(row,2, new QTableWidgetItem( b->getTypeBateau()));
+   }
+    ui->tableBateau->update();
 
 }
 
@@ -70,6 +86,7 @@ void MainWindow::on_pushButton_4_clicked()
     // ajout dans la liste des bateaux
     if (w->bateau) {
         bateaux << w->bateau;
+        ajouteLigneBateau(w->bateau);
         // update affichage
     }
 }

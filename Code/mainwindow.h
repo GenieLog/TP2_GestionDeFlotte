@@ -41,6 +41,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     void ajouteLigneClient(Client* c);
+    void ajouteLigneBateau(Bateau *b );
 };
 
 #endif // MAINWINDOW_H
