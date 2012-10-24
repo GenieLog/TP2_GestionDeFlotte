@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 }
 
 /**
-  ajoute une ligne dans les tableau de clients a partir d'un objet Client
+  @brief ajoute une ligne dans les tableau de clients a partir d'un objet Client
   */
 void MainWindow::ajouteLigneClient(Client *c = NULL)
 {
@@ -44,7 +44,7 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
 }
 
 /**
-  slot pour ajouter le client dans la liste et l'affichage
+  @brief slot pour ajouter le client dans la liste et l'affichage
 */
 void MainWindow::clientAdded(FormClient *form)
 {
@@ -55,8 +55,8 @@ void MainWindow::clientAdded(FormClient *form)
 }
 
 /**
+  @brief  affiche le formulaire d'ajout client
   boutton ajoute client
-  affiche le formulaire
 */
 void MainWindow::on_pushButton_clicked()
 {
@@ -86,7 +86,8 @@ void MainWindow::ajouteLigneBateau(Bateau *b = NULL)
 }
 
 /**
-  boutton ajoute bateau
+  @brief  affiche le formulaire d'ajout d'un bateau
+          boutton ajoute bateau
 */
 void MainWindow::on_pushButton_4_clicked()
 {
@@ -129,7 +130,7 @@ void MainWindow::affiche_tableClient()
 }
 
 /**
-  edition d'une ligne sélectionnée dans le tableau de client
+  @brief  edition d'une ligne sélectionnée dans le tableau de client
 */
 void MainWindow::on_pushButton_2_clicked()
 {
@@ -139,7 +140,7 @@ void MainWindow::on_pushButton_2_clicked()
 }
 
 /**
-  supprimer la ligne sélectionnée dans le tableau des clients
+  @brief  supprime la ligne sélectionnée dans le tableau des clients
 */
 void MainWindow::on_pushButton_3_clicked()
 {
