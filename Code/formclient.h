@@ -17,6 +17,8 @@ public:
     ~FormClient();
 
     Client* client;
+signals:
+    void clientAdded(FormClient *form);
 
 private slots:
     void on_pushButton_clicked();
