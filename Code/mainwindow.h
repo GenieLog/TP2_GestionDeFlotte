@@ -35,6 +35,7 @@ private slots:
     void on_pushButton_4_clicked();
 
 
+    void affiche_tableClient();
     void on_tableClient_activated(const QModelIndex &index);
 
 private:

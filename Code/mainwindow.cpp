@@ -3,7 +3,6 @@
 #include "formclient.h"
 #include "formbateau.h"
 
-#include <QTextStream>
 #include <QtDebug>
 
 
@@ -13,6 +12,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableClient->size();
+    for(int i=0; i<5; i++)
+    {
+        clients.append(new Client("a", "b",true, "c", QDate()));
+    }
+    affiche_tableClient();
 
 /*    {
     }*/
@@ -34,7 +38,7 @@ void MainWindow::on_pushButton_clicked()
     if (w->client) {
         this->clients.append(w->client);
         // update affichage
-        ui->tableClient->insertRow(1);
+        affiche_tableClient();
         ui->tableClient->update();
     }
 
@@ -49,39 +53,41 @@ void MainWindow::on_pushButton_4_clicked()
         bateaux << w->bateau;
         // update affichage
     }
-    int row = ui->tableClient->rowCount();
-    int col = ui->tableClient->columnCount();
-
-    for(int i=row; i< row+clients.size(); i++)
-    {
-        int j=0;
-
-        ui->tableClient->setItem(i, j++%col, new QTableWidgetItem(clients[i]->getNom()));
-        ui->tableClient->setItem(i, j++%col, new QTableWidgetItem(clients[i]->getPrenom()));
-//        ui->tableClient->insertRow(1);
-    }
-    ui->tableClient->update();
 }
 
 void MainWindow::on_tableClient_activated(const QModelIndex &index)
 {
+}
+
+void MainWindow::affiche_tableClient()
+{
     QTextStream cout(stdout, QIODevice::WriteOnly);
     //QVector<Client*>:: iterator it;
-    qDebug() << "index row" << index.row();
-    qDebug() << "index column" << index.column();
 
     int row = ui->tableClient->rowCount();
     int col = ui->tableClient->columnCount();
-    cout << "row " << row << endl;
+    qDebug() << "row" <<row;
+    qDebug() << "column" <<col;
 
 
-    for(int i=row; i< row+clients.size(); i++)
+    for(int i=0; i< clients.size(); i++)
     {
-        int j=0;
+        qDebug() << i << " " << clients[i]->getNom()<< endl;
 
-        ui->tableClient->setItem(i, j++%col, new QTableWidgetItem(clients[i]->getNom()));
-        ui->tableClient->setItem(i, j++%col, new QTableWidgetItem(clients[i]->getPrenom()));
+        ui->tableClient->insertRow(row+i);
+        ui->tableClient->setVerticalHeaderItem(row+i,new QTableWidgetItem(QString::number(row)));
+        ui->tableClient->setItem(row+i,0, new QTableWidgetItem(QString::number(i)));
+        ui->tableClient->setItem(row+i,1, new QTableWidgetItem(QString::number(col)));
+        ui->tableClient->update();
+
+
+        //QTableWidgetItem tmp = new QTableWidgetItem(clients[i]->getNom()));
+        QTableWidgetItem *tmp = ui->tableClient->verticalHeaderItem(i+row);
+//        tmp->setText(clients[i]->getNom());
+        //tmp->setText(tr("MainWindow", "wesh", 1));
+//        ui->tableClient->setItem(row+i, 1, tmp);
+//        ui->tableClient->setItem(row+i, 2, tmp);
 //        ui->tableClient->insertRow(1);
     }
-    ui->tableClient->update(index);
+    ui->tableClient->update();
 }
