@@ -32,15 +32,33 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    /*
     FormClient *w = new FormClient();
     w->show();
     // ajout dans la liste globale des clients
     if (w->client) {
         this->clients.append(w->client);
         // update affichage
-        affiche_tableClient();
+        ajouteLigneClient(w->client);
         ui->tableClient->update();
+        //affiche_tableClient();
+
+    }*/
+    ajouteLigneClient(NULL);
+
+}
+
+void MainWindow::ajouteLigneClient(Client *c = NULL)
+{
+    int row = ui->tableClient->rowCount();
+    ui->tableClient->insertRow(row);
+    ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
+    if(c)
+    {
+        ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
+        ui->tableClient->setItem(row,2, new QTableWidgetItem( c->getPrenom()));
     }
+    ui->tableClient->update();
 
 }
 
@@ -48,6 +66,7 @@ void MainWindow::on_pushButton_4_clicked()
 {
     FormBateau *w = new FormBateau();
     w->show();
+
     // ajout dans la liste des bateaux
     if (w->bateau) {
         bateaux << w->bateau;
@@ -72,22 +91,8 @@ void MainWindow::affiche_tableClient()
 
     for(int i=0; i< clients.size(); i++)
     {
-        qDebug() << i << " " << clients[i]->getNom()<< endl;
-
-        ui->tableClient->insertRow(row+i);
-        ui->tableClient->setVerticalHeaderItem(row+i,new QTableWidgetItem(QString::number(row)));
-        ui->tableClient->setItem(row+i,0, new QTableWidgetItem(QString::number(i)));
-        ui->tableClient->setItem(row+i,1, new QTableWidgetItem(QString::number(col)));
-        ui->tableClient->update();
-
-
-        //QTableWidgetItem tmp = new QTableWidgetItem(clients[i]->getNom()));
-        QTableWidgetItem *tmp = ui->tableClient->verticalHeaderItem(i+row);
-//        tmp->setText(clients[i]->getNom());
-        //tmp->setText(tr("MainWindow", "wesh", 1));
-//        ui->tableClient->setItem(row+i, 1, tmp);
-//        ui->tableClient->setItem(row+i, 2, tmp);
-//        ui->tableClient->insertRow(1);
+//        qDebug() << i << " " << clients[i]->getNom()<< endl;
+        ajouteLigneClient(clients[i]);
     }
     ui->tableClient->update();
 }

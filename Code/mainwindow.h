@@ -40,6 +40,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void ajouteLigneClient(Client* c);
 };
 
 #endif // MAINWINDOW_H
