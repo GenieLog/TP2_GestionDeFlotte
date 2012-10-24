@@ -7,6 +7,7 @@ FormClient::FormClient(QWidget *parent) :
     ui(new Ui::FormClient)
 {
     ui->setupUi(this);
+    client = NULL;
 }
 
 FormClient::~FormClient()
@@ -32,9 +33,9 @@ void FormClient::on_pushButton_2_clicked()
     QString natio ( ui->natio_cl->text());
     bool sex (ui->radioButton->isChecked());
     QDate birth (ui->dateEdit->date());
-    Client *client = new Client(nom,prenom,sex,natio,birth);
-    if(client->save())
-        this->hide();
+    client = new Client(nom,prenom,sex,natio,birth);
+//    if(client->save())
+    this->hide();
 
 
 }

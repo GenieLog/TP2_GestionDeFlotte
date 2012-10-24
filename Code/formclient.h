@@ -2,6 +2,7 @@
 #define FORMCLIENT_H
 
 #include <QWidget>
+#include "modele/client.h"
 
 namespace Ui {
     class FormClient;
@@ -14,6 +15,8 @@ class FormClient : public QWidget
 public:
     explicit FormClient(QWidget *parent = 0);
     ~FormClient();
+
+    Client* client;
 
 private slots:
     void on_pushButton_clicked();
