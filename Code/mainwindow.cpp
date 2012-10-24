@@ -22,7 +22,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+/**
+  ajoute une ligne dans les tableau de clients a partir d'un objet Client
+  */
 void MainWindow::ajouteLigneClient(Client *c = NULL)
 {
     int row = ui->tableClient->rowCount();
@@ -41,6 +43,9 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
 
 }
 
+/**
+  slot pour ajouter le client dans la liste et l'affichage
+*/
 void MainWindow::clientAdded(FormClient *form)
 {
     this->clients.append(form->client);
@@ -49,6 +54,10 @@ void MainWindow::clientAdded(FormClient *form)
 
 }
 
+/**
+  boutton ajoute client
+  affiche le formulaire
+*/
 void MainWindow::on_pushButton_clicked()
 {
 
@@ -59,6 +68,9 @@ void MainWindow::on_pushButton_clicked()
     w->show();
 }
 
+/**
+  TODO
+*/
 void MainWindow::ajouteLigneBateau(Bateau *b = NULL)
 {
     int row = ui->tableBateau->rowCount();
@@ -73,6 +85,9 @@ void MainWindow::ajouteLigneBateau(Bateau *b = NULL)
 
 }
 
+/**
+  boutton ajoute bateau
+*/
 void MainWindow::on_pushButton_4_clicked()
 {
     FormBateau *w = new FormBateau();
@@ -86,10 +101,14 @@ void MainWindow::on_pushButton_4_clicked()
     }
 }
 
+// non utilisee mais le slot est généré
 void MainWindow::on_tableClient_activated(const QModelIndex &index)
 {
 }
 
+/**
+  Aidera a afficher les donnees sauvegardées
+*/
 void MainWindow::affiche_tableClient()
 {
     QTextStream cout(stdout, QIODevice::WriteOnly);
@@ -109,6 +128,9 @@ void MainWindow::affiche_tableClient()
     ui->tableClient->update();
 }
 
+/**
+  edition d'une ligne sélectionnée dans le tableau de client
+*/
 void MainWindow::on_pushButton_2_clicked()
 {
     int row=ui->tableClient->currentRow();
@@ -116,6 +138,9 @@ void MainWindow::on_pushButton_2_clicked()
     qDebug() << "current row "<< row;
 }
 
+/**
+  supprimer la ligne sélectionnée dans le tableau des clients
+*/
 void MainWindow::on_pushButton_3_clicked()
 {
     int row=ui->tableClient->currentRow();
