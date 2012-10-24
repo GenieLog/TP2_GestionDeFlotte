@@ -3,12 +3,18 @@
 #include <QDataStream>
 #include <QFile>
 
+
+/**
+  *\obsolete
+  */
+
+
 class Serializable
 {
 public:
-    virtual ~Serializable() {}
+   virtual ~Serializable() {}
     virtual void load(QDataStream & i) = 0;
-    virtual bool save() = 0;
+    virtual bool save();
     static QFile savefile;
 };
 
