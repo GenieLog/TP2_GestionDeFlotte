@@ -1,8 +1,0 @@
-Pour qu'on facilite l'utilisation 
-chacun peut mettre des questions pour ses galeres
-ou les solutions qu'il a trouve..
-
-Ouvrir le fichier.pro pour ouvrir le projet
-Compiler en ligne de commande :
-  - qmake "chemin/ver/fichier.pro" (que quand le projet change)
-  - make

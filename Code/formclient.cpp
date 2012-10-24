@@ -43,6 +43,8 @@ void FormClient::on_pushButton_2_clicked()
             client->setPermis(P_COTIER);
         else
             this->client->setPermis(AUCUN);
+        if(client->save())
+             this->hide();
         emit clientAdded(this);//clientAdded(this);
     }
 

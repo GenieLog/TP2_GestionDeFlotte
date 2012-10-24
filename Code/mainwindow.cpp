@@ -32,7 +32,7 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
     {
         ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
         ui->tableClient->setItem(row,2, new QTableWidgetItem( c->getPrenom()));
-        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getNaissance().toString()));
+        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getNaissance().toString("d/M/yy")));
         ui->tableClient->setItem(row,4, new QTableWidgetItem( c->getPermis()));
 /*        ui->tableClient->setItem(row,3, new QTableWidgetItem( c->getSexe()? "H":"F"));
         ui->tableClient->setItem(row,4, new QTableWidgetItem( c->getNationalite()));

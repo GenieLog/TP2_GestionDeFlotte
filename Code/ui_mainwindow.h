@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Oct 24 19:40:55 2012
+** Created: Wed Oct 24 21:10:11 2012
 **      by: Qt User Interface Compiler version 4.6.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -121,6 +121,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
         tableClient->setHorizontalHeaderItem(5, __qtablewidgetitem11);
         tableClient->setObjectName(QString::fromUtf8("tableClient"));
+        tableClient->setEnabled(true);
         tableClient->setGeometry(QRect(10, 70, 951, 321));
         tableClient->horizontalHeader()->setDefaultSectionSize(100);
         tableClient->horizontalHeader()->setMinimumSectionSize(29);
@@ -182,6 +183,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem22 = new QTableWidgetItem();
         tableWidget_4->setHorizontalHeaderItem(5, __qtablewidgetitem22);
         tableWidget_4->setObjectName(QString::fromUtf8("tableWidget_4"));
+        tableWidget_4->setEnabled(false);
         tableWidget_4->setGeometry(QRect(20, 60, 931, 311));
         pushButton_11 = new QPushButton(tab_3);
         pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
@@ -213,7 +215,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
