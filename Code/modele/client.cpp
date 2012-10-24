@@ -10,7 +10,6 @@ Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDat
 {_skipper = false;
 }
 
-<<<<<<< HEAD
 QString Client::getPermis()
 {
     QString str;
@@ -32,9 +31,7 @@ QString Client::getPermis()
 void Client::load(QDataStream & in)
 {
     in >> _nom >> _prenom >> _sexe >> _nationalite >> _naissance >> _skipper ; //permis.load();
-=======
->>>>>>> d71853d4fc69b5d6b94f40015fc1fff9a64861e8
-
+}
 
 bool Client::save()
 {
