@@ -20,6 +20,9 @@ public:
 
 private:
     Ui::FormBateau *ui;
+
+private slots:
+    void on_pushButton_2_clicked();
 };
 
 #endif // FORMBATEAU_H

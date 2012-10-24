@@ -30,7 +30,6 @@ void FormClient::on_pushButton_clicked()
   **/
 void FormClient::on_pushButton_2_clicked()
 {
-    //    Client(QString _nom, QString _prenom, bool _sexe, QString _nationalite, QDate _naissance);
     QString nom ( ui->nom_cl->text());
     QString prenom ( ui->prenom_cl->text());
     QString natio ( ui->natio_cl->text());

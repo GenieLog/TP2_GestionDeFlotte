@@ -4,12 +4,13 @@
 #include <QtDebug>
 #include <QRegExp>
 
-QFile Serializable::savefile("bdd/clients.txt");
+
 Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDate naissance)
     : Personne(nom ,prenom, sexe, nationalite, naissance)
 {_skipper = false;
 }
 
+<<<<<<< HEAD
 QString Client::getPermis()
 {
     QString str;
@@ -31,14 +32,15 @@ QString Client::getPermis()
 void Client::load(QDataStream & in)
 {
     in >> _nom >> _prenom >> _sexe >> _nationalite >> _naissance >> _skipper ; //permis.load();
+=======
+>>>>>>> d71853d4fc69b5d6b94f40015fc1fff9a64861e8
 
-}
 
 bool Client::save()
 {
     int ID;
     QFile file("bdd/clients.txt");
-    if(!file.exists())
+    if(!file.exists() )
    ID=0;
     else
     {
@@ -65,7 +67,6 @@ file.close();
     }
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
         return false;
-
 
     QTextStream flux(&file);
 
