@@ -2,6 +2,8 @@
 #include "ui_formclient.h"
 #include "modele/client.h"
 
+#include <QDebug>
+
 FormClient::FormClient(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FormClient)
@@ -15,17 +17,22 @@ FormClient::~FormClient()
     delete ui;
 }
 
+/**
+  @brief  boutton annuler
+*/
 void FormClient::on_pushButton_clicked()
 {
-    delete client;
-    this->hide();
+    if(client)
+        delete client;
+//    this->hide();
     delete this;
 }
 
 
 /**
   *\brief fonction qui s'execute lors de l'appui sur le bouton de sauvegarde du formulaire de client
-  *
+  *@brief  remplit un objet client a partir du formulaire
+  *@brief  emet un signal lorsque l'objet client est pret
   *
   **/
 void FormClient::on_pushButton_2_clicked()
@@ -37,9 +44,10 @@ void FormClient::on_pushButton_2_clicked()
     QDate birth (ui->dateEdit->date());
     client = new Client(nom,prenom,sex,natio,birth);
     if(client) {
-        if(ui->comboBox->currentIndex()==0x02)
+//        qDebug() << "permis index " << ui->comboBox->currentIndex();
+        if(ui->comboBox->currentIndex()==2)
             client->setPermis(P_HAUTURIER);
-        if(ui->comboBox->currentIndex()==0x01)
+        else if(ui->comboBox->currentIndex()==1)
             client->setPermis(P_COTIER);
         else
             this->client->setPermis(AUCUN);

@@ -10,9 +10,13 @@ Client::Client(QString nom, QString prenom, bool sexe, QString nationalite, QDat
 {_skipper = false;
 }
 
+/**
+  @brief  renvoir la chaine de caractère correspondant au permis
+*/
 QString Client::getPermis()
 {
     QString str;
+    qDebug()<< "permis " << this->_permis;
     switch (this->_permis)
     {
     case P_HAUTURIER:
