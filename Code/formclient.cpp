@@ -24,7 +24,6 @@ void FormClient::on_pushButton_clicked()
 {
     if(client)
         delete client;
-//    this->hide();
     delete this;
 }
 
@@ -53,11 +52,12 @@ void FormClient::on_pushButton_2_clicked()
             this->client->setPermis(AUCUN);
         if(client->save())
              this->hide();
-        emit clientAdded(this);//clientAdded(this);
+        emit clientAdded(this);
     }
 
 }
 
+// slot non utilisé
 void FormClient::on_comboBox_currentIndexChanged(const QString &arg1)
 {
 }

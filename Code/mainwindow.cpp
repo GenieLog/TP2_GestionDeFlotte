@@ -29,7 +29,6 @@ void MainWindow::ajouteLigneClient(Client *c = NULL)
 {
     int row = ui->tableClient->rowCount();
     ui->tableClient->insertRow(row);
-//    ui->tableClient->setVerticalHeaderItem(row,new QTableWidgetItem(QString::number(row)));
     if(c)
     {
         ui->tableClient->setItem(row,1, new QTableWidgetItem( c->getNom()));
@@ -98,7 +97,6 @@ void MainWindow::on_pushButton_4_clicked()
     if (w->bateau) {
         bateaux << w->bateau;
         ajouteLigneBateau(w->bateau);
-        // update affichage
     }
 }
 
@@ -112,9 +110,6 @@ void MainWindow::on_tableClient_activated(const QModelIndex &index)
 */
 void MainWindow::affiche_tableClient()
 {
-    QTextStream cout(stdout, QIODevice::WriteOnly);
-    //QVector<Client*>:: iterator it;
-
     int row = ui->tableClient->rowCount();
     int col = ui->tableClient->columnCount();
     qDebug() << "row" <<row;
@@ -131,6 +126,7 @@ void MainWindow::affiche_tableClient()
 
 /**
   @brief  edition d'une ligne sélectionnée dans le tableau de client
+  @todo
 */
 void MainWindow::on_pushButton_2_clicked()
 {

@@ -32,17 +32,13 @@ public:
 public slots:
     void clientAdded(FormClient *form);
 //    void bateauAdded();
+
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_4_clicked();
-
-
     void affiche_tableClient();
     void on_tableClient_activated(const QModelIndex &index);
-
     void on_pushButton_2_clicked();
-
     void on_pushButton_3_clicked();
 
 private:
